@@ -52,9 +52,12 @@ export function buildMetadata({
       images: [`${BASE_URL}/opengraph-image`],
     },
     icons: {
-      icon: "/logo.webp",
-      shortcut: "/logo.webp",
-      apple: "/logo.webp",
+      icon: [
+        { url: "/favicon.ico", sizes: "16x16 32x32 48x48", type: "image/x-icon" },
+        { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      ],
+      shortcut: "/favicon.ico",
+      apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     },
   };
 }
