@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Shield, Award, MapPin, Clock, CheckCircle } from "lucide-react";
 import CTABlock from "@/components/CTABlock";
@@ -44,6 +45,26 @@ export default function AboutPage() {
             <span>/</span>
             <span className="text-slate-300">About</span>
           </nav>
+
+          {/* Brand mark */}
+          <div className="mb-6">
+            <div className="inline-flex items-center gap-4 bg-white rounded-2xl px-5 py-3 shadow-2xl">
+              <Image
+                src="/17a4449d-7097-4aa6-8a9a-670ac660c2c8_image_jpeg.webp"
+                alt="Dr. Autocare — Valeting & Detailing Services official logo"
+                width={72}
+                height={72}
+                className="rounded-lg"
+                priority
+              />
+              <div>
+                <p className="font-bold text-slate-900 text-lg leading-tight">Dr. Autocare</p>
+                <p className="text-slate-500 text-sm">Valeting & Detailing Services</p>
+                <p className="text-slate-400 text-xs">Stockport, Greater Manchester</p>
+              </div>
+            </div>
+          </div>
+
           <span className="inline-block text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">About Us</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
             Stockport&apos;s Trusted Mobile Car Valeting Specialist
@@ -57,7 +78,7 @@ export default function AboutPage() {
       {/* Story */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl font-bold text-white mb-5">Our Story</h2>
               <div className="space-y-4 text-slate-400 leading-relaxed">
@@ -76,18 +97,38 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: "6+", label: "Years Experience" },
-                { value: "500+", label: "Cars Treated" },
-                { value: "5.0★", label: "Google Rating" },
-                { value: "127", label: "5-Star Reviews" },
-              ].map(({ value, label }) => (
-                <div key={label} className="bg-slate-950 border border-slate-800 rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-bold text-amber-400 mb-1">{value}</div>
-                  <div className="text-sm text-slate-400">{label}</div>
+            <div className="space-y-4">
+              {/* Branded van photo */}
+              <div className="relative h-56 rounded-2xl overflow-hidden border border-slate-800">
+                <Image
+                  src="/214ab023-0e0b-443c-af74-d3b42302c935_image_jpeg.webp"
+                  alt="Dr. Autocare branded mobile valeting van alongside a freshly detailed blue SEAT Leon in Stockport"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
+                <div className="absolute bottom-3 left-3">
+                  <span className="text-xs font-semibold text-amber-400 bg-slate-950/80 backdrop-blur-sm px-3 py-1 rounded-full">
+                    Our Mobile Unit
+                  </span>
                 </div>
-              ))}
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "6+", label: "Years Experience" },
+                  { value: "500+", label: "Cars Treated" },
+                  { value: "5.0★", label: "Google Rating" },
+                  { value: "127", label: "5-Star Reviews" },
+                ].map(({ value, label }) => (
+                  <div key={label} className="bg-slate-950 border border-slate-800 rounded-2xl p-5 text-center">
+                    <div className="text-3xl font-bold text-amber-400 mb-1">{value}</div>
+                    <div className="text-sm text-slate-400">{label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

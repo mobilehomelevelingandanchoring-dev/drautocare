@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import ServicesGrid from "@/components/ServicesGrid";
 import ProcessSection from "@/components/ProcessSection";
+import WorkGallery from "@/components/WorkGallery";
 import Reviews from "@/components/Reviews";
 import LocationsSection from "@/components/LocationsSection";
 import FAQSection from "@/components/FAQSection";
@@ -69,6 +70,7 @@ export default function HomePage() {
       <TrustBar />
       <ServicesGrid />
       <ProcessSection />
+      <WorkGallery />
       <Reviews />
       <CTABlock
         title="Get a Free Quote Today"

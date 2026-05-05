@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, MessageCircle, Star, MapPin, Shield, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/schema";
@@ -81,41 +82,42 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Right — Stats card */}
+          {/* Right — Hero photo */}
           <div className="relative hidden lg:block">
+            {/* Glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-3xl blur-2xl scale-105" />
-            <div className="relative bg-slate-900 border border-slate-700 rounded-3xl p-8">
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                {[
-                  { value: "5★", label: "Average Rating", sub: "127 Google reviews" },
-                  { value: "500+", label: "Cars Detailed", sub: "in Greater Manchester" },
-                  { value: "100%", label: "Self-Contained", sub: "we supply water & power" },
-                  { value: "6+", label: "Years Experience", sub: "professional detailing" },
-                ].map(({ value, label, sub }) => (
-                  <div key={label} className="text-center p-4 bg-slate-800 rounded-2xl">
-                    <div className="text-3xl font-bold text-amber-400 mb-1">{value}</div>
-                    <div className="text-sm font-semibold text-white mb-0.5">{label}</div>
-                    <div className="text-xs text-slate-500">{sub}</div>
-                  </div>
-                ))}
-              </div>
 
-              {/* Service list */}
-              <div className="space-y-2">
-                <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-3">Services offered</p>
-                {[
-                  "Mobile Car Valeting",
-                  "Car Detailing",
-                  "Paint Correction",
-                  "Scratch Removal",
-                  "Interior Deep Clean",
-                  "Ceramic Coating",
-                ].map((service) => (
-                  <div key={service} className="flex items-center gap-2 text-sm text-slate-300">
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />
-                    {service}
-                  </div>
-                ))}
+            {/* Photo container */}
+            <div className="relative h-[560px] rounded-3xl overflow-hidden border border-slate-700">
+              <Image
+                src="/1d994c80-bb53-492d-a2b5-6b53df58f5fb_image_jpeg.webp"
+                alt="Dr. Autocare technician performing a mobile car valet on a Range Rover at a residential driveway in Stockport — fully self-contained service"
+                fill
+                className="object-cover object-center"
+                priority
+                sizes="(max-width: 1024px) 0px, 45vw"
+              />
+              {/* Bottom gradient for stat readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/10 to-transparent" />
+
+              {/* Overlay stats */}
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { value: "5★", label: "127 Google Reviews" },
+                    { value: "500+", label: "Cars Detailed" },
+                    { value: "100%", label: "Self-Contained" },
+                    { value: "6+", label: "Years Experience" },
+                  ].map(({ value, label }) => (
+                    <div
+                      key={label}
+                      className="bg-slate-900/80 backdrop-blur-sm border border-slate-700/80 rounded-xl p-3 text-center"
+                    >
+                      <div className="text-2xl font-bold text-amber-400 mb-0.5">{value}</div>
+                      <div className="text-xs text-slate-400">{label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
