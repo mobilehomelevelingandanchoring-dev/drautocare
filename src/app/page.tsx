@@ -1,65 +1,84 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
+import ServicesGrid from "@/components/ServicesGrid";
+import ProcessSection from "@/components/ProcessSection";
+import Reviews from "@/components/Reviews";
+import LocationsSection from "@/components/LocationsSection";
+import FAQSection from "@/components/FAQSection";
+import BlogPreview from "@/components/BlogPreview";
+import CTABlock from "@/components/CTABlock";
+import { faqSchema, localBusinessSchema, BUSINESS } from "@/lib/schema";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Mobile Car Valeting Stockport | Dr. Autocare — Greater Manchester",
+  description:
+    "Dr. Autocare provides professional mobile car valeting, detailing, and paint correction across Stockport and Greater Manchester. We come to you — self-contained, no facilities needed. Book today.",
+  alternates: { canonical: BUSINESS.url },
+};
+
+const homepageFaqs = [
+  {
+    question: "What is mobile car valeting and how does it work?",
+    answer:
+      "Mobile car valeting is a professional car cleaning service where a trained technician travels to your home, workplace, or any convenient location and cleans your vehicle on-site. Dr. Autocare brings all required equipment — including water, power, and professional products — so no facilities are needed from you.",
+  },
+  {
+    question: "How much does Dr. Autocare's mobile valeting service cost?",
+    answer:
+      "Prices start from £40 for a mini valet. A full valet (interior and exterior) starts from £80–£120. Full detailing and paint correction packages start from £180. All prices vary by vehicle size and condition. Contact us for a personalised, fixed quote.",
+  },
+  {
+    question: "Which areas in Greater Manchester do you cover?",
+    answer:
+      "Dr. Autocare covers Stockport and the wider Greater Manchester area including Cheadle, Bramhall, Hazel Grove, Didsbury, Sale, Altrincham, Wilmslow, and all surrounding postcodes. Contact us to confirm we cover your specific postcode.",
+  },
+  {
+    question: "Can you remove pet hair, stains, and odours from car interiors?",
+    answer:
+      "Yes. Our interior deep clean service addresses pet hair (using specialist removal tools before hot water extraction), stains (assessed individually — most common stains can be significantly reduced or removed), and odours (using professional odour eliminator treatments).",
+  },
+  {
+    question: "What is the difference between car valeting and car detailing?",
+    answer:
+      "Valeting is a thorough clean of your vehicle. Detailing is a more intensive process that includes paint decontamination (clay bar, iron fallout removal), machine polishing to correct paint defects (swirl marks, scratches), and long-term protective coating application. Detailing achieves a show-quality finish.",
+  },
+  {
+    question: "Do you offer ceramic coating in Stockport?",
+    answer:
+      "Yes. Dr. Autocare applies professional ceramic coatings across Stockport and Greater Manchester. Ceramic coatings bond chemically to your paintwork, providing hydrophobic properties, UV protection, and 2–5 years of durability. We recommend paint correction before coating for the best results.",
+  },
+];
+
+export default function HomePage() {
+  const faqMarkup = faqSchema(homepageFaqs);
+  const businessMarkup = localBusinessSchema();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqMarkup) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessMarkup) }}
+      />
+
+      <Hero />
+      <TrustBar />
+      <ServicesGrid />
+      <ProcessSection />
+      <Reviews />
+      <CTABlock
+        title="Get a Free Quote Today"
+        subtitle="Mobile car valeting and detailing across Stockport and Greater Manchester. We come to you — no facilities needed."
+        variant="amber"
+      />
+      <LocationsSection />
+      <FAQSection faqs={homepageFaqs} />
+      <BlogPreview />
+      <CTABlock />
+    </>
   );
 }
