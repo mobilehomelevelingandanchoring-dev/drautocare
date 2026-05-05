@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Clock, Tag, ArrowRight, ArrowLeft } from "lucide-react";
 import { blogPosts, getBlogPostBySlug } from "@/lib/data/blog";
 import CTABlock from "@/components/CTABlock";
-import { articleSchema, BUSINESS } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, BUSINESS } from "@/lib/schema";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -37,12 +37,18 @@ export default async function BlogPostPage({ params }: Props) {
     date: post.date,
     url: `${BUSINESS.url}/blog/${post.slug}`,
   });
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", url: BUSINESS.url },
+    { name: "Blog", url: `${BUSINESS.url}/blog` },
+    { name: post.title, url: `${BUSINESS.url}/blog/${post.slug}` },
+  ]);
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <section className="pt-28 pb-12 bg-slate-950 border-b border-slate-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">

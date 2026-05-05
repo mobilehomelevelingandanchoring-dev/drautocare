@@ -6,7 +6,7 @@ import { services, getServiceBySlug } from "@/lib/data/services";
 import { locations } from "@/lib/data/locations";
 import FAQSection from "@/components/FAQSection";
 import CTABlock from "@/components/CTABlock";
-import { serviceSchema, faqSchema, BUSINESS } from "@/lib/schema";
+import { serviceSchema, faqSchema, breadcrumbSchema, BUSINESS } from "@/lib/schema";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -40,12 +40,18 @@ export default async function ServicePage({ params }: Props) {
     url: `${BUSINESS.url}/services/${service.slug}`,
   });
   const faqMarkup = faqSchema(service.faqs);
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", url: BUSINESS.url },
+    { name: "Services", url: `${BUSINESS.url}/services` },
+    { name: service.name, url: `${BUSINESS.url}/services/${service.slug}` },
+  ]);
   const whatsappUrl = `https://wa.me/${BUSINESS.telephone.replace(/[^0-9]/g, "")}?text=Hi%20Dr.%20Autocare%2C%20I%27d%20like%20a%20quote%20for%20${encodeURIComponent(service.name)}.`;
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqMarkup) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Hero */}
       <section className="pt-28 pb-16 bg-slate-950 border-b border-slate-800">

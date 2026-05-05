@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCall from "@/components/StickyCall";
-import { localBusinessSchema, BUSINESS } from "@/lib/schema";
+import { localBusinessSchema, websiteSchema, BUSINESS } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BUSINESS.url,
+    languages: {
+      "en-GB": BUSINESS.url,
+      "x-default": BUSINESS.url,
+    },
   },
   robots: {
     index: true,
@@ -47,6 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const businessSchema = localBusinessSchema();
+  const siteSchema = websiteSchema();
 
   return (
     <html lang="en-GB">
@@ -54,6 +59,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </head>
       <body className="bg-slate-950 text-white antialiased">

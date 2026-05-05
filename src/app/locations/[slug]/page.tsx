@@ -6,7 +6,7 @@ import { locations, getLocationBySlug } from "@/lib/data/locations";
 import { services } from "@/lib/data/services";
 import FAQSection from "@/components/FAQSection";
 import CTABlock from "@/components/CTABlock";
-import { localBusinessSchema, faqSchema, BUSINESS } from "@/lib/schema";
+import { localBusinessSchema, faqSchema, breadcrumbSchema, BUSINESS } from "@/lib/schema";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -63,12 +63,18 @@ export default async function LocationPage({ params }: Props) {
   };
 
   const faqMarkup = faqSchema(locationFaqs);
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", url: BUSINESS.url },
+    { name: "Locations", url: `${BUSINESS.url}/locations` },
+    { name: location.name, url: `${BUSINESS.url}/locations/${slug}` },
+  ]);
   const whatsappUrl = `https://wa.me/${BUSINESS.telephone.replace(/[^0-9]/g, "")}?text=Hi%20Dr.%20Autocare%2C%20I%27d%20like%20a%20quote%20in%20${encodeURIComponent(location.name)}.`;
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqMarkup) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Hero */}
       <section className="pt-28 pb-16 bg-slate-950 border-b border-slate-800">

@@ -38,7 +38,7 @@ export function buildMetadata({
       type: "website",
       images: [
         {
-          url: `${BASE_URL}/images/dr-autocare-og.jpg`,
+          url: `${BASE_URL}/opengraph-image`,
           width: 1200,
           height: 630,
           alt: `${BUSINESS.name} — Mobile Car Valeting Stockport`,
@@ -49,11 +49,11 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${BASE_URL}/images/dr-autocare-og.jpg`],
+      images: [`${BASE_URL}/opengraph-image`],
     },
     icons: {
-      icon: "/favicon.ico",
-      apple: "/apple-touch-icon.png",
+      icon: "/favicon.svg",
+      shortcut: "/favicon.svg",
     },
   };
 }

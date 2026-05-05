@@ -2,7 +2,7 @@ export const BUSINESS = {
   name: "Dr. Autocare",
   telephone: "+447700900000",
   email: "info@drautocare.co.uk",
-  url: "https://www.drautocare.co.uk",
+  url: "https://drautocare.co.uk",
   description:
     "Professional mobile car valeting and detailing service covering Stockport and Greater Manchester. We come to you.",
   address: {
@@ -39,7 +39,7 @@ export const BUSINESS = {
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "AutoBodyShop"],
+    "@type": ["LocalBusiness", "AutomotiveService"],
     "@id": `${BUSINESS.url}/#business`,
     name: BUSINESS.name,
     url: BUSINESS.url,
@@ -161,10 +161,22 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
   };
 }
 
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BUSINESS.url}/#website`,
+    name: BUSINESS.name,
+    url: BUSINESS.url,
+    description: BUSINESS.description,
+  };
+}
+
 export function articleSchema(post: {
   title: string;
   excerpt: string;
   date: string;
+  dateModified?: string;
   url: string;
   author?: string;
 }) {
@@ -174,6 +186,7 @@ export function articleSchema(post: {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    dateModified: post.dateModified ?? post.date,
     author: {
       "@type": "Organization",
       name: BUSINESS.name,
