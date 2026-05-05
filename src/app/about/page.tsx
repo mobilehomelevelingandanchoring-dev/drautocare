@@ -48,19 +48,21 @@ export default function AboutPage() {
 
           {/* Brand mark */}
           <div className="mb-6">
-            <div className="inline-flex items-center gap-4 bg-white rounded-2xl px-5 py-3 shadow-2xl">
-              <Image
-                src="/17a4449d-7097-4aa6-8a9a-670ac660c2c8_image_jpeg.webp"
-                alt="Dr. Autocare — Valeting & Detailing Services official logo"
-                width={72}
-                height={72}
-                className="rounded-lg"
-                priority
-              />
+            <div className="inline-flex items-center gap-4 bg-slate-900 border border-slate-700 rounded-2xl px-5 py-3">
+              <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                <Image
+                  src="/logo.webp"
+                  alt="Dr. Autocare — Valeting & Detailing Services official logo"
+                  width={64}
+                  height={64}
+                  className="object-cover w-full h-full"
+                  priority
+                />
+              </div>
               <div>
-                <p className="font-bold text-slate-900 text-lg leading-tight">Dr. Autocare</p>
-                <p className="text-slate-500 text-sm">Valeting & Detailing Services</p>
-                <p className="text-slate-400 text-xs">Stockport, Greater Manchester</p>
+                <p className="font-bold text-white text-lg leading-tight">Dr. Autocare</p>
+                <p className="text-amber-400 text-sm">Valeting & Detailing Services</p>
+                <p className="text-slate-500 text-xs">Stockport, Greater Manchester</p>
               </div>
             </div>
           </div>
@@ -101,7 +103,7 @@ export default function AboutPage() {
               {/* Branded van photo */}
               <div className="relative h-56 rounded-2xl overflow-hidden border border-slate-800">
                 <Image
-                  src="/214ab023-0e0b-443c-af74-d3b42302c935_image_jpeg.webp"
+                  src="/dr-autocare-van-seat-leon-mobile-valeting-stockport.webp"
                   alt="Dr. Autocare branded mobile valeting van alongside a freshly detailed blue SEAT Leon in Stockport"
                   fill
                   className="object-cover object-center"

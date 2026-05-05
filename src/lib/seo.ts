@@ -52,8 +52,9 @@ export function buildMetadata({
       images: [`${BASE_URL}/opengraph-image`],
     },
     icons: {
-      icon: "/favicon.svg",
-      shortcut: "/favicon.svg",
+      icon: "/logo.webp",
+      shortcut: "/logo.webp",
+      apple: "/logo.webp",
     },
   };
 }

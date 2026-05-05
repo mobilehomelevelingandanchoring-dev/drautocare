@@ -14,8 +14,9 @@ export const metadata: Metadata = {
     "Professional mobile car valeting, detailing, and paint correction across Stockport and Greater Manchester. We come to you — fully self-contained.",
   metadataBase: new URL(BUSINESS.url),
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/logo.webp",
+    shortcut: "/logo.webp",
+    apple: "/logo.webp",
   },
   openGraph: {
     type: "website",

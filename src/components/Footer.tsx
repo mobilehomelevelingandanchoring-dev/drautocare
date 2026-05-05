@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/schema";
@@ -36,8 +37,14 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-amber-500 rounded-full flex items-center justify-center font-bold text-slate-950 text-sm">
-                DR
+              <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-slate-700">
+                <Image
+                  src="/logo.webp"
+                  alt="Dr. Autocare logo"
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
               </div>
               <div className="leading-none">
                 <span className="block text-white font-bold text-lg">Dr. Autocare</span>

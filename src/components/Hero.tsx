@@ -90,7 +90,7 @@ export default function Hero() {
             {/* Photo container */}
             <div className="relative h-[560px] rounded-3xl overflow-hidden border border-slate-700">
               <Image
-                src="/1d994c80-bb53-492d-a2b5-6b53df58f5fb_image_jpeg.webp"
+                src="/range-rover-mobile-valet-residential-driveway-stockport.webp"
                 alt="Dr. Autocare technician performing a mobile car valet on a Range Rover at a residential driveway in Stockport — fully self-contained service"
                 fill
                 className="object-cover object-center"

@@ -3,40 +3,40 @@ import Link from "next/link";
 
 const GALLERY = [
   {
-    src: "/317b6718-9a8f-40ad-bf2b-e803dbfc9de6_image_jpeg.webp",
-    alt: "Dr. Autocare exterior mobile valet — car fully covered in professional foam cannon wash",
+    src: "/foam-cannon-exterior-car-wash-mobile-valeting-stockport.webp",
+    alt: "Dr. Autocare exterior mobile valet — car fully covered in professional foam cannon wash, Stockport",
   },
   {
-    src: "/7451ca6c-71fb-49d5-a631-7537d67c0acf_image_jpeg.webp",
-    alt: "Blue SEAT Leon after Dr. Autocare mobile car valeting in Stockport — gleaming paintwork",
+    src: "/seat-leon-mobile-car-valeting-manchester.webp",
+    alt: "Blue SEAT Leon gleaming after Dr. Autocare mobile car valeting in Manchester",
   },
   {
-    src: "/dcf3e60f-e5a1-4110-b6b3-ba74b36679ba_image_jpeg.webp",
-    alt: "Range Rover interior deep clean by Dr. Autocare — spotless leather seats and dashboard",
+    src: "/range-rover-interior-deep-clean-stockport.webp",
+    alt: "Range Rover interior deep clean by Dr. Autocare — spotless leather seats and dashboard, Stockport",
   },
   {
-    src: "/87eec900-cff2-412a-8575-c06778041bb7_image_jpeg.webp",
-    alt: "Dr. Autocare mobile valeting a Mini Countryman — branded van visible in background",
+    src: "/mini-countryman-mobile-valet-stockport.webp",
+    alt: "Dr. Autocare mobile valeting a Mini Countryman in Stockport — branded van visible in background",
   },
   {
-    src: "/b932bf82-b4b9-4609-aa93-1302194b9835_image_jpeg.webp",
-    alt: "Blue Mazda RX-8 detailed by Dr. Autocare — Dr. Autocare van alongside",
+    src: "/mazda-rx8-mobile-car-detailing-greater-manchester.webp",
+    alt: "Blue Mazda RX-8 mobile car detailing by Dr. Autocare, Greater Manchester",
   },
   {
-    src: "/1909aa21-dcdd-4719-a7c3-3fd88439164b_image_jpeg.webp",
-    alt: "Black Ford Focus ST — polished to a mirror finish by Dr. Autocare in Greater Manchester",
+    src: "/ford-focus-st-mobile-valet-stockport.webp",
+    alt: "Black Ford Focus ST polished to a mirror finish by Dr. Autocare mobile valeting, Stockport",
   },
   {
-    src: "/6982a872-e4f5-412e-b475-12639eae61d1_image_jpeg.webp",
-    alt: "White Nissan Juke Nismo with custom red wheels — cleaned and detailed by Dr. Autocare",
+    src: "/nissan-juke-nismo-mobile-car-detailing-stockport.webp",
+    alt: "White Nissan Juke Nismo with custom red wheels — detailed by Dr. Autocare, Stockport",
   },
   {
-    src: "/e4ef2174-9fe4-47bc-93bb-aeb27375cd63_image_jpeg.webp",
-    alt: "Black Nissan Juke — deep gloss finish after Dr. Autocare mobile car valeting",
+    src: "/nissan-juke-mobile-car-valet-stockport.webp",
+    alt: "Black Nissan Juke with deep gloss finish after Dr. Autocare mobile car valet, Stockport",
   },
   {
-    src: "/d7f0374c-89f1-4770-b517-84b5573548eb_image_jpeg.webp",
-    alt: "Dr. Autocare fleet valeting — multiple vehicles being washed simultaneously in Greater Manchester",
+    src: "/fleet-mobile-car-valeting-greater-manchester.webp",
+    alt: "Dr. Autocare fleet mobile car valeting — multiple vehicles washed simultaneously, Greater Manchester",
   },
 ];
 

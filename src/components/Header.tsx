@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
@@ -45,8 +46,15 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-amber-500 rounded-full flex items-center justify-center font-bold text-slate-950 text-sm group-hover:bg-amber-400 transition-colors">
-              DR
+            <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-slate-700 group-hover:ring-amber-500 transition-all">
+              <Image
+                src="/logo.webp"
+                alt="Dr. Autocare logo"
+                width={40}
+                height={40}
+                className="object-cover"
+                priority
+              />
             </div>
             <div className="leading-none">
               <span className="block text-white font-bold text-lg tracking-tight">Dr. Autocare</span>
