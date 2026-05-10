@@ -65,7 +65,11 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-2 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                <span>Stockport, Greater Manchester</span>
+                <address className="not-italic leading-snug">
+                  Gail Avenue<br />
+                  Stockport, SK4 2PY<br />
+                  Greater Manchester
+                </address>
               </div>
               <div className="flex items-start gap-2 text-sm text-slate-400">
                 <Clock className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />

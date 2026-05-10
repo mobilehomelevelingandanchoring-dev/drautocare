@@ -6,15 +6,15 @@ export const BUSINESS = {
   description:
     "Professional mobile car valeting and detailing service covering Stockport and Greater Manchester. We come to you.",
   address: {
-    streetAddress: "Stockport",
+    streetAddress: "Gail Avenue",
     addressLocality: "Stockport",
     addressRegion: "Greater Manchester",
-    postalCode: "SK1",
+    postalCode: "SK4 2PY",
     addressCountry: "GB",
   },
   geo: {
-    latitude: 53.4083,
-    longitude: -2.1494,
+    latitude: 53.4289,
+    longitude: -2.1674,
   },
   openingHours: ["Mo-Su 00:00-23:59"],
   priceRange: "££",

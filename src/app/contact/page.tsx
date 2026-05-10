@@ -34,10 +34,10 @@ const contactMethods = [
   },
   {
     icon: MapPin,
-    label: "Location",
-    value: "Stockport, Greater Manchester",
+    label: "Address",
+    value: "Gail Avenue, Stockport, SK4 2PY",
     href: null,
-    description: "We cover all SK and M postcodes and surrounding areas.",
+    description: "Based in Stockport. We come to you — covering all SK and M postcodes.",
   },
   {
     icon: Clock,
@@ -85,6 +85,12 @@ export default function ContactPage() {
                       <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="font-semibold text-white hover:text-amber-400 transition-colors block">
                         {value}
                       </a>
+                    ) : label === "Address" ? (
+                      <address className="not-italic font-semibold text-white leading-snug">
+                        Gail Avenue<br />
+                        Stockport, SK4 2PY<br />
+                        <span className="text-slate-400 font-normal text-sm">Greater Manchester</span>
+                      </address>
                     ) : (
                       <div className="font-semibold text-white">{value}</div>
                     )}
