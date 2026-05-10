@@ -24,14 +24,6 @@ const aggregateRatingSchema = {
     bestRating: "5",
     worstRating: "1",
   },
-  review: reviews.map((r) => ({
-    "@type": "Review",
-    author: { "@type": "Person", name: r.author },
-    reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
-    reviewBody: r.text,
-    datePublished: r.date,
-    name: r.service,
-  })),
 };
 
 const platforms = [
