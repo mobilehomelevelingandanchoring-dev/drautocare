@@ -19,6 +19,7 @@ export const BUSINESS = {
   openingHours: ["Mo-Su 00:00-23:59"],
   priceRange: "££",
   areaServed: [
+    "Heaton Moor",
     "Stockport",
     "Manchester",
     "Cheadle",
@@ -107,6 +108,27 @@ export function localBusinessSchema() {
     slogan: "Professional mobile car valeting and detailing — we come to you.",
     foundingDate: "2018",
     numberOfEmployees: { "@type": "QuantitativeValue", minValue: 1, maxValue: 5 },
+    hasMap: "https://www.google.com/maps/place/Dr+Autocare",
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: BUSINESS.geo.latitude,
+        longitude: BUSINESS.geo.longitude,
+      },
+      geoRadius: "15000",
+    },
+    containedInPlace: {
+      "@type": "Place",
+      name: "Heaton Moor",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Stockport",
+        postalCode: "SK4",
+        addressRegion: "Greater Manchester",
+        addressCountry: "GB",
+      },
+    },
   };
 }
 
