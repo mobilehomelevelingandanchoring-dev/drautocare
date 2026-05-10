@@ -33,6 +33,8 @@ export const BUSINESS = {
     "https://www.facebook.com/drautocare",
     "https://www.instagram.com/drautocare",
     "https://www.google.com/maps/place/Dr+Autocare",
+    "https://m.yelp.com/biz/dr-autocare-stockport-2",
+    "https://www.yell.com/biz/dr-autocare-stockport-9205018/",
   ],
 };
 
@@ -78,6 +80,33 @@ export function localBusinessSchema() {
       bestRating: "5",
       worstRating: "1",
     },
+    knowsAbout: [
+      "Mobile Car Valeting",
+      "Car Detailing",
+      "Paint Correction",
+      "Ceramic Coating",
+      "Interior Deep Cleaning",
+      "Scratch Removal",
+      "Paint Sealant Application",
+      "Hot Water Extraction",
+      "Machine Polishing",
+      "Swirl Mark Removal",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Mobile Car Valeting & Detailing Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mini Valet" }, price: "40", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Full Valet" }, price: "80", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Car Detailing" }, price: "120", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paint Correction" }, price: "180", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ceramic Coating" }, price: "300", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Deep Clean" }, price: "80", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
+      ],
+    },
+    slogan: "Professional mobile car valeting and detailing — we come to you.",
+    foundingDate: "2018",
+    numberOfEmployees: { "@type": "QuantitativeValue", minValue: 1, maxValue: 5 },
   };
 }
 
@@ -169,6 +198,66 @@ export function websiteSchema() {
     name: BUSINESS.name,
     url: BUSINESS.url,
     description: BUSINESS.description,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${BUSINESS.url}/?s={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
+  };
+}
+
+export function howToSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Book Mobile Car Valeting with Dr. Autocare",
+    description: "Book professional mobile car valeting or detailing in Stockport and Greater Manchester in 4 simple steps. We come to you — no facilities needed.",
+    totalTime: "PT10M",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Get a Free Quote",
+        text: "Call, WhatsApp, or use our online quote form at drautocare.co.uk/quote. Tell us your vehicle type, service needed, and location. We respond quickly and provide a fixed, transparent price — no hidden costs.",
+        url: `${BUSINESS.url}/quote`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Choose a Date and Time",
+        text: "Pick a slot that works for you. Dr. Autocare is available 24/7, every day of the week. Same-day and next-day appointments are often available across Stockport and Greater Manchester.",
+        url: `${BUSINESS.url}/quote`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "We Come to Your Location",
+        text: "Our technician arrives fully equipped with water, power, and professional products. We work at your home, workplace, or any suitable location. You don't need to provide anything.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Inspect and Enjoy",
+        text: "We walk you through the results before leaving. We don't leave until you're completely satisfied. Your vehicle will look transformed.",
+      },
+    ],
+    supply: [
+      { "@type": "HowToSupply", name: "Professional car cleaning products" },
+      { "@type": "HowToSupply", name: "Hot water extraction machine" },
+      { "@type": "HowToSupply", name: "Self-contained water supply and power" },
+    ],
+    tool: [
+      { "@type": "HowToTool", name: "Machine polisher" },
+      { "@type": "HowToTool", name: "Steam cleaner" },
+      { "@type": "HowToTool", name: "Pressure washer" },
+    ],
   };
 }
 

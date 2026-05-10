@@ -13,6 +13,7 @@ export interface Service {
   keywords: string[];
   metaTitle: string;
   metaDescription: string;
+  relatedBlogSlugs: string[];
 }
 
 export const services: Service[] = [
@@ -70,9 +71,10 @@ Whether your car needs a basic wash and vacuum or a full valet — including eng
       "car valet near me Stockport",
       "professional car valeting Manchester",
     ],
-    metaTitle: "Mobile Car Valeting Stockport | Dr. Autocare — We Come To You",
+    metaTitle: "Mobile Car Valeting Stockport | From £40 — Dr. Autocare",
     metaDescription:
-      "Professional mobile car valeting in Stockport and Greater Manchester. Dr. Autocare brings expert-grade cleaning to your door. Self-contained — no facilities needed. Book today.",
+      "Dr. Autocare's mobile car valeting starts from £40 in Stockport and Greater Manchester. We come to you — fully self-contained, 24/7, no facilities needed. Get a free quote today.",
+    relatedBlogSlugs: ["how-often-should-you-valet-your-car", "mobile-car-valeting-benefits"],
   },
   {
     slug: "car-detailing",
@@ -128,9 +130,10 @@ Our detailers are trained in paint thickness measurement, safe machine polishing
       "mobile car detailing Stockport",
       "full car detail near me",
     ],
-    metaTitle: "Car Detailing Stockport & Manchester | Dr. Autocare Professional Detail",
+    metaTitle: "Car Detailing Stockport | From £120 — Dr. Autocare",
     metaDescription:
-      "Expert mobile car detailing in Stockport and Greater Manchester. Paint decontamination, machine polishing, ceramic coating. Dr. Autocare — show-car results at your door.",
+      "Professional car detailing from £120 in Stockport and Manchester. Multi-stage decontamination, machine polishing, and protective coating. Show-car results at your door — available 24/7.",
+    relatedBlogSlugs: ["what-is-paint-correction", "ceramic-coating-vs-wax-which-is-better", "how-often-should-you-valet-your-car"],
   },
   {
     slug: "paint-correction",
@@ -186,9 +189,10 @@ A single-stage polish will remove 50–70% of defects and significantly enhance 
       "scratch removal car Stockport",
       "machine polishing Manchester",
     ],
-    metaTitle: "Paint Correction Stockport | Swirl Mark Removal — Dr. Autocare",
+    metaTitle: "Paint Correction Stockport | Remove Swirl Marks From £180 — Dr. Autocare",
     metaDescription:
-      "Professional paint correction in Stockport and Manchester. Remove swirl marks, scratches, and water spots. Mobile service — Dr. Autocare comes to you. Get a free quote.",
+      "Remove swirl marks, scratches, and water spots with professional paint correction from £180 in Stockport. Dr. Autocare measures paint thickness before polishing — safe, expert results.",
+    relatedBlogSlugs: ["what-is-paint-correction", "how-often-should-you-valet-your-car"],
   },
   {
     slug: "scratch-removal",
@@ -238,9 +242,10 @@ Our mobile scratch removal service covers all vehicle types and paint colours. W
       "remove car scratches Stockport",
       "swirl mark scratch removal near me",
     ],
-    metaTitle: "Car Scratch Removal Stockport | Mobile Scratch Repair — Dr. Autocare",
+    metaTitle: "Car Scratch Removal Stockport | From £60 Mobile Service — Dr. Autocare",
     metaDescription:
-      "Mobile car scratch removal in Stockport and Greater Manchester. Clear coat scratches, scuffs, and stone chips treated at your location. Dr. Autocare — professional results, affordable pricing.",
+      "Mobile scratch removal from £60 in Stockport. Clear coat scratches removed without respraying — Dr. Autocare assesses every scratch before starting. Free quote, same-day often available.",
+    relatedBlogSlugs: ["what-is-paint-correction", "mobile-car-valeting-benefits"],
   },
   {
     slug: "interior-cleaning",
@@ -297,9 +302,10 @@ For vehicles with leather seats, we use pH-balanced leather cleaners followed by
       "deep clean car interior Greater Manchester",
       "leather seat cleaning Stockport",
     ],
-    metaTitle: "Car Interior Cleaning Stockport | Deep Clean Service — Dr. Autocare",
+    metaTitle: "Car Interior Cleaning Stockport | HWE & Steam From £80 — Dr. Autocare",
     metaDescription:
-      "Professional mobile car interior cleaning in Stockport and Manchester. Hot water extraction, steam cleaning, leather conditioning. Dr. Autocare — deep clean at your door.",
+      "Deep car interior cleaning from £80 in Stockport — hot water extraction, steam, leather conditioning, pet hair and stain removal. Dr. Autocare comes to your door, available 24/7.",
+    relatedBlogSlugs: ["how-often-should-you-valet-your-car", "mobile-car-valeting-benefits"],
   },
   {
     slug: "exterior-protection",
@@ -361,9 +367,10 @@ All protection treatments are applied after a thorough decontamination wash to e
       "paint sealant Greater Manchester",
       "exterior car protection Manchester",
     ],
-    metaTitle: "Exterior Car Protection Stockport | Ceramic Coating & Wax — Dr. Autocare",
+    metaTitle: "Ceramic Coating Stockport | Paint Protection From £80 — Dr. Autocare",
     metaDescription:
-      "Professional exterior paint protection in Stockport and Manchester. Ceramic coatings, paint sealants, carnauba wax. Dr. Autocare mobile service — long-lasting results.",
+      "Ceramic coating, paint sealant, and carnauba wax from £80 in Stockport. Dr. Autocare's exterior protection lasts up to 5 years — hydrophobic, UV-resistant, and low-maintenance.",
+    relatedBlogSlugs: ["ceramic-coating-vs-wax-which-is-better", "what-is-paint-correction"],
   },
 ];
 

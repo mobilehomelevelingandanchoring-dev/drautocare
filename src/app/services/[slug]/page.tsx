@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CheckCircle, Clock, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { services, getServiceBySlug } from "@/lib/data/services";
 import { locations } from "@/lib/data/locations";
+import { blogPosts } from "@/lib/data/blog";
 import FAQSection from "@/components/FAQSection";
 import CTABlock from "@/components/CTABlock";
 import { serviceSchema, faqSchema, breadcrumbSchema, BUSINESS } from "@/lib/schema";
@@ -135,14 +136,18 @@ export default async function ServicePage({ params }: Props) {
         subtitle={`Common questions about Dr. Autocare's ${service.name.toLowerCase()} service.`}
       />
 
-      {/* Internal links — other services */}
+      {/* Other services — all of them */}
       <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white mb-8">Related Services</h2>
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-bold text-white">Our Other Services</h2>
+            <Link href="/services" className="text-sm text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+              View all <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services
               .filter((s) => s.slug !== service.slug)
-              .slice(0, 3)
               .map((s) => (
                 <Link
                   key={s.slug}
@@ -151,7 +156,7 @@ export default async function ServicePage({ params }: Props) {
                 >
                   <div>
                     <div className="font-semibold text-sm text-white group-hover:text-amber-400 transition-colors">{s.name}</div>
-                    <div className="text-xs text-slate-500 mt-0.5">{s.price}</div>
+                    <div className="text-xs text-slate-500 mt-0.5">{s.price} · {s.duration}</div>
                   </div>
                   <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors flex-shrink-0" />
                 </Link>
@@ -160,21 +165,61 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Location links */}
-      <section className="py-12 bg-slate-900 border-t border-slate-800">
+      {/* Further reading — related blog posts */}
+      {service.relatedBlogSlugs.length > 0 && (() => {
+        const relatedPosts = blogPosts.filter((p) => service.relatedBlogSlugs.includes(p.slug));
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="py-12 bg-slate-900 border-t border-slate-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold text-white">Further Reading</h2>
+                <Link href="/blog" className="text-sm text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+                  All guides <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group bg-slate-950 border border-slate-800 hover:border-amber-500/40 rounded-xl p-4 transition-all"
+                  >
+                    <div className="text-xs text-slate-500 mb-2">{post.category} · {post.readTime}</div>
+                    <div className="font-semibold text-sm text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">{post.title}</div>
+                    <div className="flex items-center gap-1 text-xs text-amber-400">Read guide <ArrowRight className="w-3 h-3" /></div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* Location links — descriptive text links */}
+      <section className="py-12 bg-slate-950 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-white mb-6">{service.name} Near You</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-white">{service.name} Near You</h2>
+            <Link href="/locations" className="text-sm text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+              All areas <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {locations.map((loc) => (
               <Link
                 key={loc.slug}
                 href={`/locations/${loc.slug}`}
-                className="text-sm text-slate-400 hover:text-amber-400 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition-all"
+                className="group bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-xl p-3 transition-all"
               >
-                {service.shortName} in {loc.name}
+                <div className="text-sm font-medium text-white group-hover:text-amber-400 transition-colors">{service.shortName} in {loc.name}</div>
+                <div className="text-xs text-slate-500 mt-0.5">{loc.postcodePrefixes.join(", ")}</div>
               </Link>
             ))}
           </div>
+          <p className="text-xs text-slate-500 mt-4">
+            Also see: <Link href="/faq" className="text-amber-400 hover:text-amber-300 transition-colors">Common questions</Link> · <Link href="/quote" className="text-amber-400 hover:text-amber-300 transition-colors">Get a free quote</Link> · <Link href="/about" className="text-amber-400 hover:text-amber-300 transition-colors">About Dr. Autocare</Link>
+          </p>
         </div>
       </section>
 

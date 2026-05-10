@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Clock, Tag, ArrowRight, ArrowLeft } from "lucide-react";
 import { blogPosts, getBlogPostBySlug } from "@/lib/data/blog";
+import { services } from "@/lib/data/services";
 import CTABlock from "@/components/CTABlock";
 import { articleSchema, breadcrumbSchema, BUSINESS } from "@/lib/schema";
 
@@ -44,6 +45,7 @@ export default async function BlogPostPage({ params }: Props) {
   ]);
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const relatedServices = services.filter((s) => post.relatedServiceSlugs.includes(s.slug));
 
   return (
     <>
@@ -133,6 +135,40 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </article>
+
+      {/* Related services */}
+      {relatedServices.length > 0 && (
+        <section className="py-14 bg-slate-900 border-t border-slate-800">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-xl font-bold text-white">Book This Service</h2>
+              <Link href="/services" className="text-sm text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+                All services <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {relatedServices.map((svc) => (
+                <Link
+                  key={svc.slug}
+                  href={`/services/${svc.slug}`}
+                  className="group flex items-center justify-between gap-3 bg-slate-950 border border-slate-800 hover:border-amber-500/50 rounded-xl p-4 transition-all"
+                >
+                  <div>
+                    <div className="font-semibold text-sm text-white group-hover:text-amber-400 transition-colors">{svc.name}</div>
+                    <div className="text-xs text-slate-500 mt-0.5">{svc.price} · {svc.duration}</div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors flex-shrink-0" />
+                </Link>
+              ))}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-500">
+              <Link href="/quote" className="text-amber-400 hover:text-amber-300 transition-colors">Get a free quote →</Link>
+              <Link href="/faq" className="text-amber-400 hover:text-amber-300 transition-colors">FAQ →</Link>
+              <Link href="/locations" className="text-amber-400 hover:text-amber-300 transition-colors">Service areas →</Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Related posts */}
       {relatedPosts.length > 0 && (

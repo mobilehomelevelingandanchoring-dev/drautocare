@@ -9,6 +9,7 @@ export interface BlogPost {
   metaTitle: string;
   metaDescription: string;
   keywords: string[];
+  relatedServiceSlugs: string[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -51,10 +52,11 @@ Greater Manchester's high annual rainfall accelerates paint degradation when pro
 The biggest barrier to regular car care is inconvenience. Mobile car valeting from Dr. Autocare eliminates that barrier entirely — we come to your home or workplace, meaning you lose no time from your day and your vehicle gets the attention it needs on schedule.
 
 Contact Dr. Autocare to set up a maintenance programme that keeps your vehicle in showroom condition year-round.`,
-    metaTitle: "How Often Should You Valet Your Car? UK Driver's Guide | Dr. Autocare",
+    metaTitle: "How Often Should You Valet Your Car? | Dr. Autocare Stockport",
     metaDescription:
-      "Discover the ideal car valeting schedule for UK drivers. Dr. Autocare explains how often to valet, what each session should include, and why Greater Manchester's weather matters.",
+      "Most UK drivers don't valet their cars often enough. Here's the recommended schedule — weekly, monthly, and quarterly — to protect your paint and keep your interior fresh.",
     keywords: ["how often valet car", "car valeting schedule UK", "mobile car valeting Stockport", "car care tips Manchester"],
+    relatedServiceSlugs: ["mobile-car-valeting", "interior-cleaning", "exterior-protection"],
   },
   {
     slug: "ceramic-coating-vs-wax-which-is-better",
@@ -117,10 +119,11 @@ For most drivers in Greater Manchester who want their vehicle protected against 
 - **Long-term investment:** Ceramic coating
 
 Dr. Autocare can advise which option best suits your specific vehicle and usage. Contact us for a personalised recommendation.`,
-    metaTitle: "Ceramic Coating vs Wax: Which is Better? | Dr. Autocare Stockport",
+    metaTitle: "Ceramic Coating vs Car Wax: Which is Better? | Dr. Autocare",
     metaDescription:
-      "Compare ceramic coating vs car wax for paint protection. Dr. Autocare explains durability, cost, and which is right for your car in Greater Manchester.",
+      "Ceramic coating or car wax — which should you choose? A clear, honest comparison of cost, durability, and protection for UK drivers. Ceramic from £300, wax from £80.",
     keywords: ["ceramic coating vs wax", "best car paint protection", "ceramic coating Stockport", "car wax Manchester"],
+    relatedServiceSlugs: ["exterior-protection", "car-detailing"],
   },
   {
     slug: "what-is-paint-correction",
@@ -175,10 +178,11 @@ Scratches that have penetrated through the clear coat into the base coat (colour
 The correction itself is permanent — the defects removed are gone. However, the paintwork remains vulnerable to new defects from improper washing, road debris, and environmental fallout. This is why protection application immediately after correction is essential, and why maintaining correct washing techniques is critical to preserving the result.
 
 Contact Dr. Autocare for a paint correction assessment and quote. We serve Stockport, Manchester, and the wider Greater Manchester area.`,
-    metaTitle: "What is Paint Correction? Complete Guide | Dr. Autocare Stockport",
+    metaTitle: "What is Paint Correction? How It Works & What It Costs | Dr. Autocare",
     metaDescription:
-      "Learn exactly what paint correction is, what defects it fixes, and how the process works. Dr. Autocare explains swirl mark removal, machine polishing, and paint protection.",
+      "Paint correction removes swirl marks, scratches, and water spots using machine polishers. This guide explains what it is, what it fixes, and what to expect — including pricing from £180.",
     keywords: ["what is paint correction", "paint correction explained", "swirl mark removal", "machine polishing Manchester", "paint correction Stockport"],
+    relatedServiceSlugs: ["paint-correction", "car-detailing", "scratch-removal"],
   },
   {
     slug: "mobile-car-valeting-benefits",
@@ -221,10 +225,11 @@ Driving your car to and from a valet centre presents the risk of damage during t
 Mobile valeting eliminates the overhead costs of a fixed premises — rent, rates, utilities — allowing us to deliver a premium service at a competitive price. You get more value for your money compared to paying valet centre prices that include these overheads.
 
 Dr. Autocare provides a fully mobile, professional car valeting and detailing service across Stockport and Greater Manchester. Book today to experience the difference.`,
-    metaTitle: "7 Benefits of Mobile Car Valeting vs Valet Centre | Dr. Autocare",
+    metaTitle: "7 Reasons Mobile Car Valeting Beats a Valet Centre | Dr. Autocare",
     metaDescription:
-      "Discover why mobile car valeting beats a traditional valet centre. Dr. Autocare explains the 7 key advantages of mobile valeting in Stockport and Manchester.",
+      "Why choose mobile car valeting? It's more convenient, safer for your paint, and often better value than dropping off at a valet centre. Here are 7 compelling reasons.",
     keywords: ["mobile car valeting benefits", "mobile valet vs valet centre", "why mobile car valeting", "mobile detailing Manchester"],
+    relatedServiceSlugs: ["mobile-car-valeting", "car-detailing", "interior-cleaning"],
   },
 ];
 

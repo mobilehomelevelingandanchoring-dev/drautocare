@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Shield, Award, MapPin, Clock, CheckCircle } from "lucide-react";
 import CTABlock from "@/components/CTABlock";
-import { BUSINESS } from "@/lib/schema";
+import { BUSINESS, localBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "About Dr. Autocare | Mobile Car Valeting Stockport",
+  title: "About Dr. Autocare | Stockport's Trusted Mobile Car Valeting Specialist",
   description:
-    "Learn about Dr. Autocare — Stockport's trusted mobile car valeting and detailing specialist. Professional, insured, and 5★ rated across Greater Manchester.",
+    "Dr. Autocare is a fully insured, 5★ rated mobile car valeting and detailing service based in Stockport. Over 500 vehicles treated. Studio-quality results at your door across Greater Manchester.",
   alternates: { canonical: `${BUSINESS.url}/about` },
 };
 
@@ -36,8 +36,10 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const businessMarkup = localBusinessSchema();
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessMarkup) }} />
       <section className="pt-28 pb-16 bg-slate-950 border-b border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">

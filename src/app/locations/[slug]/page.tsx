@@ -4,6 +4,13 @@ import Link from "next/link";
 import { MapPin, Phone, MessageCircle, CheckCircle, ArrowRight } from "lucide-react";
 import { locations, getLocationBySlug } from "@/lib/data/locations";
 import { services } from "@/lib/data/services";
+import { blogPosts } from "@/lib/data/blog";
+
+const areaToSlug: Record<string, string> = {
+  Stockport: "stockport", Manchester: "manchester", Cheadle: "cheadle",
+  Bramhall: "bramhall", "Hazel Grove": "hazel-grove", Didsbury: "didsbury",
+  Sale: "sale", Altrincham: "altrincham", Wilmslow: "wilmslow",
+};
 import FAQSection from "@/components/FAQSection";
 import CTABlock from "@/components/CTABlock";
 import { localBusinessSchema, faqSchema, breadcrumbSchema, BUSINESS } from "@/lib/schema";
@@ -151,9 +158,14 @@ export default async function LocationPage({ params }: Props) {
                 <div className="pt-4 border-t border-slate-800">
                   <p className="text-xs text-slate-500 uppercase tracking-wider mb-2">Also covering nearby</p>
                   <div className="flex flex-wrap gap-2">
-                    {location.nearbyAreas.map((area) => (
-                      <span key={area} className="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">{area}</span>
-                    ))}
+                    {location.nearbyAreas.map((area) => {
+                      const areaSlug = areaToSlug[area];
+                      return areaSlug ? (
+                        <Link key={area} href={`/locations/${areaSlug}`} className="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 hover:text-amber-300 px-2 py-1 rounded transition-colors">{area}</Link>
+                      ) : (
+                        <span key={area} className="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">{area}</span>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -204,6 +216,59 @@ export default async function LocationPage({ params }: Props) {
         title={`Mobile Car Valeting ${location.name} — FAQ`}
         subtitle={`Common questions about Dr. Autocare's service in ${location.name} and the ${location.postcodePrefixes.join("/")} area.`}
       />
+
+      {/* Blog guides */}
+      <section className="py-14 bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-white">Car Care Guides</h2>
+            <Link href="/blog" className="text-sm text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+              All guides <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {blogPosts.slice(0, 4).map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-xl p-4 transition-all"
+              >
+                <div className="text-xs text-slate-500 mb-2">{post.category}</div>
+                <div className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors leading-snug">{post.title}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other locations */}
+      <section className="py-10 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-bold text-white">Other Areas We Cover</h2>
+            <Link href="/locations" className="text-sm text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+              All locations <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {locations.filter((l) => l.slug !== location.slug).map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/locations/${loc.slug}`}
+                className="text-sm text-slate-400 hover:text-amber-400 bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-all"
+              >
+                {loc.name}
+              </Link>
+            ))}
+          </div>
+          <p className="text-xs text-slate-500 mt-4">
+            <Link href="/faq" className="text-amber-400 hover:text-amber-300 transition-colors">FAQ</Link> ·{" "}
+            <Link href="/quote" className="text-amber-400 hover:text-amber-300 transition-colors">Free quote</Link> ·{" "}
+            <Link href="/about" className="text-amber-400 hover:text-amber-300 transition-colors">About us</Link> ·{" "}
+            <Link href="/contact" className="text-amber-400 hover:text-amber-300 transition-colors">Contact</Link>
+          </p>
+        </div>
+      </section>
 
       <CTABlock
         title={`Book Mobile Car Valeting in ${location.name} Today`}

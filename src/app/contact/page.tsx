@@ -4,9 +4,9 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Contact Dr. Autocare | Mobile Car Valeting Stockport",
+  title: "Contact Dr. Autocare | Call, WhatsApp or Get a Free Quote — Stockport",
   description:
-    "Get in touch with Dr. Autocare for mobile car valeting and detailing in Stockport and Greater Manchester. Call, WhatsApp, or email — we respond quickly.",
+    "Get in touch with Dr. Autocare for mobile car valeting and detailing in Stockport and Greater Manchester. Call or WhatsApp +44 7375 759686 — available 24/7, we respond fast.",
   alternates: { canonical: `${BUSINESS.url}/contact` },
 };
 

@@ -12,6 +12,7 @@ interface FAQSectionProps {
   faqs?: FAQ[];
   title?: string;
   subtitle?: string;
+  bare?: boolean;
 }
 
 const defaultFaqs: FAQ[] = [
@@ -61,48 +62,56 @@ export default function FAQSection({
   faqs = defaultFaqs,
   title = "Frequently Asked Questions",
   subtitle = "Everything you need to know about Dr. Autocare's mobile car valeting and detailing service.",
+  bare = false,
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const accordion = (
+    <div className="space-y-3">
+      {faqs.map((faq, index) => (
+        <div
+          key={index}
+          className="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden"
+        >
+          <button
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            className="w-full flex items-center justify-between px-6 py-4 text-left group"
+          >
+            <span className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors pr-4">
+              {faq.question}
+            </span>
+            <ChevronDown
+              className={`w-4 h-4 text-amber-500 flex-shrink-0 transition-transform duration-200 ${
+                openIndex === index ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          {openIndex === index && (
+            <div className="px-6 pb-5">
+              <p className="text-slate-400 text-sm leading-relaxed">{faq.answer}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+
+  if (bare) return accordion;
 
   return (
     <section className="py-20 bg-slate-900">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
-          <span className="inline-block text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            FAQ
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
-          <p className="text-slate-400">{subtitle}</p>
-        </div>
-
-        <div className="space-y-3">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between px-6 py-4 text-left group"
-              >
-                <span className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors pr-4">
-                  {faq.question}
-                </span>
-                <ChevronDown
-                  className={`w-4 h-4 text-amber-500 flex-shrink-0 transition-transform duration-200 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {openIndex === index && (
-                <div className="px-6 pb-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{faq.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+        {(title || subtitle) && (
+          <div className="text-center mb-12">
+            <span className="inline-block text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              FAQ
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
+            <p className="text-slate-400">{subtitle}</p>
+          </div>
+        )}
+        {accordion}
       </div>
     </section>
   );

@@ -9,12 +9,12 @@ import LocationsSection from "@/components/LocationsSection";
 import FAQSection from "@/components/FAQSection";
 import BlogPreview from "@/components/BlogPreview";
 import CTABlock from "@/components/CTABlock";
-import { faqSchema, localBusinessSchema, BUSINESS } from "@/lib/schema";
+import { faqSchema, localBusinessSchema, howToSchema, BUSINESS } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Mobile Car Valeting Stockport | Dr. Autocare — Greater Manchester",
+  title: "Mobile Car Valeting Stockport | Dr. Autocare — We Come To You",
   description:
-    "Dr. Autocare provides professional mobile car valeting, detailing, and paint correction across Stockport and Greater Manchester. We come to you — self-contained, no facilities needed. Book today.",
+    "Looking for mobile car valeting in Stockport or Manchester? Dr. Autocare brings professional valeting, detailing & paint correction to your door. Self-contained, 5★ rated, available 24/7. Get a free quote today.",
   alternates: { canonical: BUSINESS.url },
 };
 
@@ -54,6 +54,7 @@ const homepageFaqs = [
 export default function HomePage() {
   const faqMarkup = faqSchema(homepageFaqs);
   const businessMarkup = localBusinessSchema();
+  const howToMarkup = howToSchema();
 
   return (
     <>
@@ -65,8 +66,40 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessMarkup) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToMarkup) }}
+      />
 
       <Hero />
+
+      {/* Speakable quick-facts block — optimised for AI overviews and featured snippets */}
+      <section className="py-10 bg-slate-950 border-b border-slate-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
+            <h2 className="speakable text-lg font-bold text-white mb-4">What is Dr. Autocare?</h2>
+            <p className="speakable text-slate-300 leading-relaxed mb-5">
+              <strong className="text-white">Dr. Autocare is a professional mobile car valeting and detailing service based in Stockport, Greater Manchester.</strong> We travel to your home, workplace, or any convenient location and deliver expert-grade car cleaning, paint correction, and ceramic coating — fully self-contained, with no facilities needed from you.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+              {[
+                { label: "Service Area", value: "Stockport & Greater Manchester" },
+                { label: "Starting Price", value: "From £40 (mini valet)" },
+                { label: "Availability", value: "24/7, every day" },
+                { label: "Google Rating", value: "5.0★ (127 reviews)" },
+                { label: "Self-Contained", value: "Yes — own water & power" },
+                { label: "Insured", value: "Yes — public liability" },
+              ].map(({ label, value }) => (
+                <div key={label} className="bg-slate-950 rounded-xl px-4 py-3 border border-slate-800">
+                  <div className="text-xs text-slate-500 mb-0.5">{label}</div>
+                  <div className="text-white font-semibold text-sm">{value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <TrustBar />
       <ServicesGrid />
       <ProcessSection />

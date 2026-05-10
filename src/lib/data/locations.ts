@@ -25,9 +25,9 @@ We are fully familiar with Stockport's road network and parking conditions — f
 Dr. Autocare serves hundreds of vehicles across Stockport each year, building a reputation for reliability, quality, and exceptional customer service. We are available Monday to Saturday and can often accommodate same-day bookings for standard valeting services.`,
     nearbyAreas: ["Cheadle", "Bramhall", "Hazel Grove", "Heaton Moor", "Edgeley", "Davenport"],
     postcodePrefixes: ["SK1", "SK2", "SK3", "SK4", "SK5", "SK6", "SK7"],
-    metaTitle: "Mobile Car Valeting Stockport | Dr. Autocare — SK Postcodes",
+    metaTitle: "Mobile Car Valeting Stockport | From £40 — Dr. Autocare",
     metaDescription:
-      "Professional mobile car valeting and detailing in Stockport. Dr. Autocare covers all SK postcodes. We come to you — book online or call today.",
+      "Dr. Autocare provides mobile car valeting in Stockport from £40. Covering all SK postcodes — mini valet, full detail, paint correction, ceramic coating. Self-contained, 24/7, 5★ rated.",
     landmarks: ["Stockport Market Place", "Edgeley Park", "Cheadle Royal Business Park", "Woodbank Park"],
   },
   {
@@ -43,9 +43,9 @@ Manchester's busy urban environment means cars accumulate road film, bird droppi
 We also serve the business community — offering fleet valeting arrangements for companies based in Manchester with multiple vehicles requiring regular care.`,
     nearbyAreas: ["Didsbury", "Chorlton", "Withington", "Fallowfield", "Hulme", "Salford"],
     postcodePrefixes: ["M1", "M2", "M3", "M14", "M16", "M20", "M21"],
-    metaTitle: "Mobile Car Valeting Manchester | Dr. Autocare — Greater Manchester",
+    metaTitle: "Mobile Car Valeting Manchester | From £40 — Dr. Autocare",
     metaDescription:
-      "Expert mobile car valeting in Manchester. Dr. Autocare covers South Manchester, Didsbury, Chorlton, and surrounding areas. Self-contained — no facilities needed.",
+      "Professional mobile car valeting in Manchester from £40. Dr. Autocare serves South Manchester, Didsbury, Chorlton, and city centre — self-contained, available 24/7. Book today.",
     landmarks: ["Manchester Piccadilly", "MediaCityUK", "Old Trafford", "Didsbury Village"],
   },
   {
@@ -61,9 +61,9 @@ We cover all parts of Cheadle, from the village centre and Cheadle Royal Busines
 Popular services in Cheadle include our full valet package, paint correction with ceramic coating, and regular maintenance wash programmes for those who want their vehicle maintained year-round.`,
     nearbyAreas: ["Stockport", "Bramhall", "Gatley", "Heald Green", "Wythenshawe"],
     postcodePrefixes: ["SK8"],
-    metaTitle: "Mobile Car Valeting Cheadle | Dr. Autocare — SK8 Postcode",
+    metaTitle: "Mobile Car Valeting Cheadle & Cheadle Hulme | From £40 — Dr. Autocare",
     metaDescription:
-      "Professional mobile car valeting and detailing in Cheadle and Cheadle Hulme. Dr. Autocare serves SK8. Book today for expert results at your door.",
+      "Dr. Autocare's mobile car valeting in Cheadle and Cheadle Hulme starts from £40. Serving SK8 — full valet, detail, ceramic coating. Same-day bookings often available.",
     landmarks: ["Cheadle Royal Business Park", "Cheadle Hulme Station", "Bruntwood Park"],
   },
   {
@@ -79,9 +79,9 @@ Our clients in Bramhall frequently book full detailing and ceramic coating packa
 Dr. Autocare also offers maintenance wash programmes popular with Bramhall residents — monthly or fortnightly visits to keep vehicles in top condition between full details.`,
     nearbyAreas: ["Stockport", "Cheadle Hulme", "Hazel Grove", "Poynton"],
     postcodePrefixes: ["SK7"],
-    metaTitle: "Mobile Car Valeting Bramhall | Dr. Autocare — SK7 Area",
+    metaTitle: "Mobile Car Valeting Bramhall SK7 | From £40 — Dr. Autocare",
     metaDescription:
-      "Premium mobile car valeting and detailing in Bramhall, SK7. Dr. Autocare serves Bramhall village and surrounding streets. Call for same-day availability.",
+      "Premium mobile car valeting in Bramhall, SK7 from £40. Dr. Autocare delivers full valet, detailing, and ceramic coating to your driveway. Same-day availability — call today.",
     landmarks: ["Bramhall Park", "Bramhall Village", "Bramhall Station"],
   },
   {
@@ -97,9 +97,9 @@ Our mobile service is ideal for Hazel Grove residents who value convenience — 
 Services in demand in Hazel Grove include our mini valet and full interior clean packages, particularly popular with families and commuters whose vehicles see heavy daily use.`,
     nearbyAreas: ["Stockport", "Bramhall", "Bredbury", "Marple", "Poynton"],
     postcodePrefixes: ["SK7"],
-    metaTitle: "Mobile Car Valeting Hazel Grove | Dr. Autocare — Stockport",
+    metaTitle: "Mobile Car Valeting Hazel Grove | From £40 — Dr. Autocare Stockport",
     metaDescription:
-      "Professional mobile car valeting in Hazel Grove, Stockport. Dr. Autocare serves SK7 — we come to your home or workplace. Book today.",
+      "Mobile car valeting in Hazel Grove, Stockport from £40. Dr. Autocare serves SK7 — mini valet to full detail at your home or workplace. Self-contained, available 24/7.",
     landmarks: ["Hazel Grove A6", "Torkington Park"],
   },
   {
@@ -115,9 +115,9 @@ Our Didsbury clients include professionals, families, and business owners who ex
 Booking is simple: call, WhatsApp, or use our online form, and we will confirm a convenient time to arrive. Most Didsbury bookings can be completed within 48 hours.`,
     nearbyAreas: ["Withington", "Chorlton", "East Didsbury", "Burnage", "Cheadle"],
     postcodePrefixes: ["M20"],
-    metaTitle: "Mobile Car Valeting Didsbury | Dr. Autocare — South Manchester",
+    metaTitle: "Mobile Car Valeting Didsbury | From £40 — Dr. Autocare South Manchester",
     metaDescription:
-      "Expert mobile car valeting and detailing in Didsbury, South Manchester. Dr. Autocare serves M20. Premium results at your door — call or book online.",
+      "Expert mobile car valeting in Didsbury, M20 from £40. Dr. Autocare delivers premium valeting, detailing, and ceramic coating to your door — 24/7, 5★ rated. Book online.",
     landmarks: ["Didsbury Village", "Fletcher Moss Park", "Didsbury Station"],
   },
   {
@@ -133,9 +133,9 @@ Sale's well-connected road network — including easy access to the M60 — make
 Our most popular services in Sale include our standard full valet and interior deep clean — particularly popular with families whose cars see intensive daily use with children and pets.`,
     nearbyAreas: ["Altrincham", "Stretford", "Wythenshawe", "Urmston"],
     postcodePrefixes: ["M33"],
-    metaTitle: "Mobile Car Valeting Sale | Dr. Autocare — Trafford, M33",
+    metaTitle: "Mobile Car Valeting Sale Trafford | From £40 — Dr. Autocare M33",
     metaDescription:
-      "Professional mobile car valeting in Sale, Trafford. Dr. Autocare covers M33. Book online or call today for expert valeting at your home or workplace.",
+      "Mobile car valeting in Sale, Trafford from £40. Dr. Autocare covers M33 — full valet, interior clean, ceramic coating. Same-day bookings often available. Call or book online.",
     landmarks: ["Sale Waterpark", "Brooklands Metrolink", "Trafford Centre nearby"],
   },
   {
@@ -151,9 +151,9 @@ We cover Altrincham town centre, Hale, Hale Barns, Bowdon, and the WA14/WA15 pos
 Our mobile team arrives fully equipped — no need for you to provide water or electricity. We work on driveways, in garages, on-street, or in business car parks across Altrincham.`,
     nearbyAreas: ["Sale", "Hale", "Bowdon", "Timperley", "Knutsford"],
     postcodePrefixes: ["WA14", "WA15"],
-    metaTitle: "Mobile Car Valeting Altrincham | Dr. Autocare — WA14 & WA15",
+    metaTitle: "Mobile Car Valeting Altrincham & Hale | From £40 — Dr. Autocare",
     metaDescription:
-      "Expert mobile car valeting and detailing in Altrincham, Hale, and Bowdon. Dr. Autocare serves WA14/WA15. Premium service at your location — book today.",
+      "Expert mobile car valeting in Altrincham, Hale, and Bowdon (WA14/WA15) from £40. Dr. Autocare — full valet to ceramic coating at your location. 5★ rated, available 24/7.",
     landmarks: ["Altrincham Market", "Hale Village", "Altrincham Retail Park"],
   },
   {
@@ -169,9 +169,9 @@ We cover all areas of Wilmslow including Wilmslow town centre, Alderley Edge, Ha
 Common requests in Wilmslow include full detailing packages, two-stage paint corrections, and our premium ceramic coating programmes — applied to a broad range of vehicles from sports cars to luxury SUVs and executive saloons.`,
     nearbyAreas: ["Alderley Edge", "Handforth", "Macclesfield", "Knutsford", "Bramhall"],
     postcodePrefixes: ["SK9"],
-    metaTitle: "Mobile Car Valeting Wilmslow | Dr. Autocare — Cheshire SK9",
+    metaTitle: "Mobile Car Valeting Wilmslow & Alderley Edge | From £40 — Dr. Autocare",
     metaDescription:
-      "Premium mobile car valeting and detailing in Wilmslow, Alderley Edge, and Cheshire. Dr. Autocare serves SK9. Show-standard results at your door.",
+      "Premium mobile car valeting in Wilmslow and Alderley Edge (SK9) from £40. Dr. Autocare delivers show-standard results at your door — paint correction, ceramic coating, full detail.",
     landmarks: ["Wilmslow Town Centre", "Alderley Edge Village", "Handforth Dean Retail Park"],
   },
 ];
