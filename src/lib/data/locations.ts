@@ -13,6 +13,28 @@ export interface Location {
 
 export const locations: Location[] = [
   {
+    slug: "heaton-moor",
+    name: "Heaton Moor",
+    county: "Greater Manchester",
+    description:
+      "Dr. Autocare's home neighbourhood. Based on Gail Avenue in SK4, we provide mobile car valeting and detailing throughout Heaton Moor, Heaton Norris, Heaton Chapel, and Heaton Mersey.",
+    longDescription: `Dr. Autocare is based right here in Heaton Moor — on Gail Avenue, Stockport, SK4 2PY. That makes us the truly local mobile car valeting and detailing specialist for this area. When you book with us, your technician isn't travelling from across town — we're your neighbours.
+
+Heaton Moor, Heaton Norris, Heaton Chapel, and Heaton Mersey make up one of Stockport's most sought-after residential neighbourhoods. The tree-lined streets, period properties, and busy independent high street on Heaton Moor Road give the area a distinctive character — and a strong community of vehicle owners who take pride in their cars.
+
+We serve the full SK4 postcode across all four Heaton areas. Whether you're parked on a residential street in Heaton Norris, in a driveway in Heaton Moor, or at a workplace in Heaton Chapel, we come to you — fully self-contained with our own water supply and power equipment.
+
+Our most popular services in Heaton Moor include full interior and exterior valets, paint correction for prestige vehicles, and long-term ceramic coating packages. We also carry out regular maintenance wash programmes for clients who want their car kept in showroom condition week to week.
+
+As a local business, we understand what matters to Heaton Moor residents: punctuality, quality work, and a technician who takes care of your property. We treat every driveway as if it were our own.`,
+    nearbyAreas: ["Stockport", "Didsbury", "Cheadle", "Bramhall", "Hazel Grove"],
+    postcodePrefixes: ["SK4"],
+    metaTitle: "Mobile Car Valeting Heaton Moor | Local — Dr. Autocare SK4",
+    metaDescription:
+      "Dr. Autocare is based in Heaton Moor (Gail Avenue, SK4 2PY) — your truly local mobile car valeting and detailing specialist. Serving SK4 from £40. Same-day bookings available.",
+    landmarks: ["Heaton Moor Road", "Heaton Moor Park", "Heaton Norris Park", "Heaton Chapel Station"],
+  },
+  {
     slug: "stockport",
     name: "Stockport",
     county: "Greater Manchester",
@@ -23,7 +45,7 @@ export const locations: Location[] = [
 We are fully familiar with Stockport's road network and parking conditions — from residential streets in Davenport to business parks near Cheadle Royal. Our self-contained setup means we can work anywhere across Stockport's SK postcodes without needing access to your water supply or electricity.
 
 Dr. Autocare serves hundreds of vehicles across Stockport each year, building a reputation for reliability, quality, and exceptional customer service. We are available Monday to Saturday and can often accommodate same-day bookings for standard valeting services.`,
-    nearbyAreas: ["Cheadle", "Bramhall", "Hazel Grove", "Heaton Moor", "Edgeley", "Davenport"],
+    nearbyAreas: ["Cheadle", "Bramhall", "Hazel Grove", "Heaton Moor", "Cheadle Hulme", "Edgeley"],
     postcodePrefixes: ["SK1", "SK2", "SK3", "SK4", "SK5", "SK6", "SK7"],
     metaTitle: "Mobile Car Valeting Stockport | From £40 — Dr. Autocare",
     metaDescription:

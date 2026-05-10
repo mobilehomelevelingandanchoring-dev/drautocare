@@ -10,6 +10,7 @@ const areaToSlug: Record<string, string> = {
   Stockport: "stockport", Manchester: "manchester", Cheadle: "cheadle",
   Bramhall: "bramhall", "Hazel Grove": "hazel-grove", Didsbury: "didsbury",
   Sale: "sale", Altrincham: "altrincham", Wilmslow: "wilmslow",
+  "Heaton Moor": "heaton-moor",
 };
 import FAQSection from "@/components/FAQSection";
 import CTABlock from "@/components/CTABlock";

@@ -13,10 +13,10 @@ const serviceLinks = [
 ];
 
 const locationLinks = [
+  { label: "Car Valeting Heaton Moor", href: "/locations/heaton-moor" },
   { label: "Car Valeting Stockport", href: "/locations/stockport" },
   { label: "Car Valeting Manchester", href: "/locations/manchester" },
   { label: "Car Valeting Cheadle", href: "/locations/cheadle" },
-  { label: "Car Valeting Bramhall", href: "/locations/bramhall" },
   { label: "Car Valeting Altrincham", href: "/locations/altrincham" },
   { label: "Car Valeting Wilmslow", href: "/locations/wilmslow" },
 ];
