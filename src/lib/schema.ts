@@ -16,7 +16,7 @@ export const BUSINESS = {
     latitude: 53.4083,
     longitude: -2.1494,
   },
-  openingHours: ["Mo-Sa 08:00-18:00"],
+  openingHours: ["Mo-Su 00:00-23:59"],
   priceRange: "££",
   areaServed: [
     "Stockport",
@@ -60,9 +60,9 @@ export function localBusinessSchema() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "08:00",
-        closes: "18:00",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
       },
     ],
     priceRange: BUSINESS.priceRange,

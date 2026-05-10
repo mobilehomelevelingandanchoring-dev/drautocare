@@ -65,7 +65,7 @@ export default function CTABlock({
         </div>
 
         <p className={`mt-6 text-sm ${isDark ? "text-slate-500" : "text-slate-700"}`}>
-          Serving Stockport, Manchester, Cheadle, Bramhall, Altrincham, Wilmslow & surrounding areas · Mon–Sat 8am–6pm
+          Serving Stockport, Manchester, Cheadle, Bramhall, Altrincham, Wilmslow & surrounding areas · Available 24/7
         </p>
       </div>
     </section>

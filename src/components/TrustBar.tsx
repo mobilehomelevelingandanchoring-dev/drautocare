@@ -4,7 +4,7 @@ const trustPoints = [
   { icon: Star, label: "5.0 Google Rating", sub: "127 verified reviews" },
   { icon: Shield, label: "Fully Insured", sub: "Public liability covered" },
   { icon: Award, label: "Professional Grade", sub: "Studio-quality equipment" },
-  { icon: Clock, label: "Same-Day Available", sub: "Mon–Sat 8am–6pm" },
+  { icon: Clock, label: "Available 24/7", sub: "Book any time, any day" },
   { icon: MapPin, label: "We Come To You", sub: "All SK & M postcodes" },
   { icon: ThumbsUp, label: "100% Satisfaction", sub: "Guaranteed results" },
 ];

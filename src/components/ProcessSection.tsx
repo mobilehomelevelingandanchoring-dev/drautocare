@@ -13,7 +13,7 @@ const steps = [
     step: "02",
     title: "Book Your Slot",
     description:
-      "Choose a date and time that suits you — Monday to Saturday, 8am to 6pm. Same-day and next-day appointments are often available across Stockport and Manchester.",
+      "Choose a date and time that suits you — we are available 24/7, any day of the week. Same-day and next-day appointments are often available across Stockport and Manchester.",
   },
   {
     icon: Car,

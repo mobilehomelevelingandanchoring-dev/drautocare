@@ -16,7 +16,7 @@ const contactMethods = [
     label: "Call Us",
     value: BUSINESS.telephone,
     href: `tel:${BUSINESS.telephone}`,
-    description: "Mon–Sat, 8am–6pm. We aim to answer all calls.",
+    description: "Available 24/7. We aim to answer all calls.",
   },
   {
     icon: MessageCircle,
@@ -42,9 +42,9 @@ const contactMethods = [
   {
     icon: Clock,
     label: "Opening Hours",
-    value: "Monday–Saturday",
+    value: "24/7 — Every Day",
     href: null,
-    description: "8:00am – 6:00pm. Sunday by arrangement.",
+    description: "We are available around the clock, 7 days a week.",
   },
 ];
 

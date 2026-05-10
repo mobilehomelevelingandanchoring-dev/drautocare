@@ -192,7 +192,7 @@ export default function QuotePage() {
                 </button>
 
                 <p className="text-xs text-slate-500 text-center">
-                  We will respond within a few hours during business hours (Mon–Sat 8am–6pm). For urgent requests, please call or WhatsApp.
+                  We respond quickly — available 24/7. For urgent requests, please call or WhatsApp.
                 </p>
               </form>
             </div>
