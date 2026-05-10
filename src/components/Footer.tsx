@@ -23,6 +23,8 @@ const locationLinks = [
 
 const companyLinks = [
   { label: "About Dr. Autocare", href: "/about" },
+  { label: "Customer Reviews", href: "/reviews" },
+  { label: "Our Guarantee", href: "/guarantee" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
   { label: "Get a Quote", href: "/quote" },
@@ -152,6 +154,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+            <Link href="/cookie-policy" className="hover:text-slate-300 transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>
