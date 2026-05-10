@@ -58,7 +58,7 @@ const platforms = [
 
 export default function ReviewsPage() {
   const reviewMarkup = reviewSchema(
-    reviews.map((r) => ({ author: r.author, rating: r.rating, text: r.text, date: r.date }))
+    reviews.map((r) => ({ author: r.author, rating: r.rating, text: r.text, date: r.date, service: r.service }))
   );
 
   return (

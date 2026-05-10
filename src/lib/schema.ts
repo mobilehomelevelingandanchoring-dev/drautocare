@@ -177,26 +177,33 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
-export function reviewSchema(reviews: { author: string; rating: number; text: string; date: string }[]) {
-  return reviews.map((review) => ({
+export function reviewSchema(reviews: { author: string; rating: number; text: string; date: string; service?: string }[]) {
+  return {
     "@context": "https://schema.org",
-    "@type": "Review",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: review.rating,
-      bestRating: 5,
-    },
-    author: {
-      "@type": "Person",
-      name: review.author,
-    },
-    reviewBody: review.text,
-    datePublished: review.date,
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      name: BUSINESS.name,
-    },
-  }));
+    "@graph": reviews.map((review) => ({
+      "@type": "Review",
+      name: review.service ? `${review.author} — ${review.service}` : `${review.author} review of ${BUSINESS.name}`,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(review.rating),
+        bestRating: "5",
+        worstRating: "1",
+      },
+      author: {
+        "@type": "Person",
+        name: review.author,
+      },
+      reviewBody: review.text,
+      datePublished: review.date,
+      itemReviewed: {
+        "@type": "LocalBusiness",
+        "@id": `${BUSINESS.url}/#business`,
+        name: BUSINESS.name,
+        telephone: BUSINESS.telephone,
+        url: BUSINESS.url,
+      },
+    })),
+  };
 }
 
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
