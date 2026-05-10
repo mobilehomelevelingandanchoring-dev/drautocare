@@ -82,6 +82,9 @@ export default function Footer() {
               <a href="https://m.yelp.com/biz/dr-autocare-stockport-2" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-slate-800 hover:bg-amber-500 rounded-lg flex items-center justify-center transition-colors group" aria-label="Yelp">
                 <svg className="w-4 h-4 text-slate-400 group-hover:text-slate-950" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.905-4.308a1.072 1.072 0 0 1 1.596-.206 9.817 9.817 0 0 1 2.364 3.48 1.073 1.073 0 0 1-.694 1.231zm-5.764 3.17l4.499 2.353c.824.43.772 1.62-.085 1.978a9.764 9.764 0 0 1-4.093.755 1.073 1.073 0 0 1-1.024-1.131l.2-5.115c.038-.985 1.254-1.39 1.903-.52l.6.68zm-6.42 3.04l3.141-4.003c.603-.768 1.838-.39 1.9.575l.336 5.113a1.073 1.073 0 0 1-.96 1.148 9.808 9.808 0 0 1-4.12-.606c-.86-.327-.955-1.51-.148-1.98l-.149.753zm-3.85-5.886c.432-.883 1.613-.883 2.04 0l2.119 4.336c.407.83-.328 1.73-1.228 1.49l-4.863-1.356a1.073 1.073 0 0 1-.728-1.367 9.786 9.786 0 0 1 2.66-3.103zm-.87-1.407a1.073 1.073 0 0 1-.082-1.398 9.804 9.804 0 0 1 3.09-2.677c.823-.461 1.73.2 1.669 1.14l-.338 5.113c-.065.984-1.31 1.355-1.894.562L4.252 11.51z"/></svg>
               </a>
+              <a href="https://www.yell.com/biz/dr-autocare-stockport-9205018/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-slate-800 hover:bg-amber-500 rounded-lg flex items-center justify-center transition-colors group" aria-label="Yell">
+                <svg className="w-4 h-4 text-slate-400 group-hover:text-slate-950" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3 L6.5 3 L12 10 L17.5 3 L21 3 L13.5 11.5 L13.5 21 L10.5 21 L10.5 11.5 Z"/></svg>
+              </a>
             </div>
           </div>
 
