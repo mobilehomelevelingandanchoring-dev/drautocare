@@ -27,6 +27,7 @@ const companyLinks = [
   { label: "Blog", href: "/blog" },
   { label: "Get a Quote", href: "/quote" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Sitemap", href: "/sitemap.xml" },
 ];
 
 export default function Footer() {
