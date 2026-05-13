@@ -149,7 +149,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        {/* Industry Partners */}
+        <div className="mt-10 pt-8 border-t border-slate-800">
+          <p className="text-xs text-slate-600 uppercase tracking-wider mb-3 font-semibold">Industry Partners</p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <span className="text-xs text-slate-500">
+              <a
+                href="https://www.srvdetailing.co.uk/"
+                title="SRV Detailing — Mobile Car Valeting & Detailing Stockport Manchester"
+                className="text-slate-400 hover:text-amber-400 transition-colors font-medium"
+              >
+                SRV Detailing
+              </a>
+              {" "}— Mobile Car Valeting &amp; Detailing, Stockport &amp; Manchester
+            </span>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Dr. Autocare. All rights reserved. Mobile Car Valeting Stockport.</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
