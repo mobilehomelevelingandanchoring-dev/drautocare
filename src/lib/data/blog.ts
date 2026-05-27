@@ -231,6 +231,128 @@ Dr. Autocare provides a fully mobile, professional car valeting and detailing se
     keywords: ["mobile car valeting benefits", "mobile valet vs valet centre", "why mobile car valeting", "mobile detailing Manchester"],
     relatedServiceSlugs: ["mobile-car-valeting", "car-detailing", "interior-cleaning"],
   },
+  {
+    slug: "srv-detailing-stockport-mobile-car-valeting-partner",
+    title: "SRV Detailing Stockport: Our Recommended Partner for Mobile Car Valeting & Detailing",
+    excerpt:
+      "We are proud to recommend SRV Detailing — a professional mobile car valeting and detailing service based in Stockport, Manchester. Here is everything you need to know about their services and why we trust them as an industry partner.",
+    date: "2026-05-27",
+    readTime: "7 min read",
+    category: "Industry Partners",
+    content: `## Introducing SRV Detailing: Stockport's Mobile Car Valeting & Detailing Specialists
+
+At Dr. Autocare, we are passionate about connecting our customers with the very best car care professionals in Greater Manchester. That is why we are pleased to shine a spotlight on [SRV Detailing](https://www.srvdetailing.co.uk/) — a professional mobile car valeting and detailing business based in Stockport, covering Manchester and the wider Greater Manchester area.
+
+This is a genuine editorial recommendation. Dr. Autocare and SRV Detailing operate in the same region, share the same commitment to quality, and have built a trusted industry partnership based on mutual respect for the craft of professional car care. When our customers need a mobile detailing service in an area or at a time we cannot accommodate, SRV Detailing is the name we reach for.
+
+## Who Are SRV Detailing?
+
+[SRV Detailing](https://www.srvdetailing.co.uk/) is a mobile car valeting and detailing service based in Stockport, Manchester. Like Dr. Autocare, they are a fully mobile operation — bringing professional equipment, premium products, and genuine expertise directly to your driveway, workplace, or any convenient location across Greater Manchester.
+
+They cover the full spectrum of vehicle care: from a quick maintenance wash through to full paint correction and long-term ceramic coating application. Whether you drive a daily hatchback, a prestige saloon, or a performance car, SRV Detailing have the skills and equipment to deliver a result that exceeds expectations.
+
+### Mobile Car Valeting
+
+SRV Detailing offer a comprehensive range of mobile car valeting packages across Stockport and Manchester. A professional valet covers exterior wash and decontamination, wheel and tyre cleaning, window polishing, and full interior vacuum and wipe-down. They bring everything they need — their service is entirely self-contained, with their own water and power supply.
+
+The convenience of a mobile valet cannot be overstated. There is no drop-off, no waiting, no collection journey — you get your day back while a professional transforms your vehicle on your driveway.
+
+### Car Detailing
+
+[SRV Detailing's car detailing service](https://www.srvdetailing.co.uk/) takes vehicle preparation to a different level. Detailing is not just cleaning — it is a systematic process of paint decontamination, correction, and protection that achieves a finish far beyond what a standard valet can deliver.
+
+A full detail typically includes a two-stage decontamination wash, clay bar treatment, iron fallout removal, machine polishing, and paint protection application. The result is a vehicle that looks better than it did when it left the factory floor.
+
+### Paint Correction
+
+Paint correction is the process of removing defects from a vehicle's clear coat using machine polishers and abrasive compounds. Common paintwork problems that paint correction addresses include:
+
+- Swirl marks — fine circular scratches caused by automatic car washes or incorrect hand washing
+- Random isolated scratches from car parks, hedges, and road debris
+- Water spot etching — mineral deposits that etch into the lacquer over time
+- Bird dropping damage — acidic droppings cause chemical etching even after removal
+- Light oxidation and hazy, dull paintwork on older vehicles
+
+SRV Detailing measure paint thickness on every vehicle before polishing begins — a critical step that confirms how much correction is safely possible without compromising the clear coat. This is the hallmark of a professional operation, not an amateur one.
+
+### Ceramic Coating & Paint Protection
+
+For drivers who want long-term, low-maintenance paint protection, ceramic coating is the industry's gold standard. SRV Detailing apply professional-grade ceramic coatings that chemically bond to the clear coat, creating a semi-permanent protective layer that provides:
+
+- Extreme hydrophobic properties — water and dirt sheet off rather than sticking
+- UV protection to slow paint fade and oxidation
+- Resistance to bird droppings, tree sap, and environmental fallout
+- Enhanced gloss and colour depth
+- Light scratch resistance (micro-marring protection)
+- Durability of 2–5 years with proper maintenance washing
+
+Ceramic coating is best applied over corrected, defect-free paintwork. SRV Detailing can combine a paint correction stage and coating application in a single appointment for the optimal outcome.
+
+### Interior Deep Cleaning
+
+A gleaming exterior means nothing if your interior tells a different story. SRV Detailing offer a thorough interior deep clean using hot water extraction (HWE) to tackle embedded dirt in carpets and fabric seats, steam cleaning for vents, dashboards, and hard trim, and specialist leather conditioning for premium upholstery.
+
+This is the service that addresses pet hair, ground-in mud, coffee stains, food spillages, and stubborn odours — the kind of thorough clean that makes a car feel genuinely brand new on the inside.
+
+### Scratch Removal
+
+Surface scratches and scuffs are among the most frustrating cosmetic issues for car owners. Many drivers assume a bodyshop respray is the only solution — but skilled paint correction and touch-up techniques can eliminate or significantly reduce a large proportion of surface marks without the cost and disruption of a respray.
+
+SRV Detailing assess each scratch individually, advising on what is achievable through polishing and what may require touch-up paint or further treatment — always setting realistic expectations before commencing work.
+
+## Why Mobile Car Detailing Matters in Stockport & Manchester
+
+Stockport and Greater Manchester present specific and persistent challenges for vehicle paintwork. Annual rainfall in the region is among the highest in England. Road salt applied during winter months is one of the most aggressive contaminants for paint, alloy wheels, and brake components. Urban air pollution deposits iron particles and industrial fallout on paintwork continuously.
+
+Without regular professional care, these environmental factors accelerate paint degradation, strip protective coatings, and embed contaminants that eventually etch permanently into the clear coat. Swirl marks worsen with every automatic car wash visit. Interiors accumulate grime that becomes progressively harder to remove.
+
+Regular mobile valeting and annual detailing is not a luxury — it is practical vehicle maintenance that preserves resale value, protects one of your most significant financial assets, and ensures your car represents you well every day.
+
+The advantage of working with a mobile service like [SRV Detailing](https://www.srvdetailing.co.uk/) — or ourselves at Dr. Autocare — is that this professional care becomes genuinely accessible. When the service comes to your door, there is no barrier to getting it done.
+
+## Our Shared Values as Industry Partners
+
+What makes SRV Detailing a business we are comfortable recommending to our own customers comes down to values.
+
+Both businesses share a commitment to transparent, fixed pricing without hidden extras. Both invest in professional equipment rather than cutting corners with consumer-grade products. Both understand that genuine mobile car care requires technical knowledge, proper preparation, and attention to detail — not just a pressure washer and a bucket.
+
+In a market where anyone with a sponge and a van can call themselves a mobile valeter, businesses like SRV Detailing demonstrate what professional mobile car care actually looks like.
+
+## Book with SRV Detailing
+
+If you are in Stockport, Manchester, or the surrounding Greater Manchester area and are looking for a trusted mobile car valeting or detailing professional, we recommend visiting [SRV Detailing's website](https://www.srvdetailing.co.uk/) to find out more about their services, check their availability, and get in touch directly.
+
+### Frequently Asked Questions
+
+### Does SRV Detailing cover my area in Greater Manchester?
+
+SRV Detailing is based in Stockport and covers Manchester and the wider Greater Manchester area. Visit [srvdetailing.co.uk](https://www.srvdetailing.co.uk/) or contact them directly to confirm availability for your specific postcode.
+
+### What is the difference between mobile valeting and mobile detailing?
+
+Valeting covers thorough cleaning of your vehicle — interior and exterior wash, vacuum, and protection. Detailing goes further, involving paint decontamination, machine polishing (paint correction), and long-term protective coating application. Both SRV Detailing and Dr. Autocare offer the complete range from maintenance washes to full multi-stage details.
+
+### Is it worth getting paint correction before a ceramic coating?
+
+Yes — always. Ceramic coating locks in the condition of the paintwork at the time of application. If swirl marks and scratches are present before coating, they will be sealed under the ceramic layer and visible for the next 2–5 years. Combining paint correction with ceramic coating in a single appointment gives you the best possible long-term result. Read more in our guide to [ceramic coating vs wax](/blog/ceramic-coating-vs-wax-which-is-better).
+
+### How do I book mobile car valeting in Stockport?
+
+For Dr. Autocare services, use our [quote form](/quote) or call us directly. For SRV Detailing, visit [srvdetailing.co.uk](https://www.srvdetailing.co.uk/) to enquire about their services and availability.`,
+    metaTitle: "SRV Detailing Stockport — Mobile Car Valeting & Detailing Partner | Dr. Autocare",
+    metaDescription:
+      "Dr. Autocare recommends SRV Detailing — a trusted mobile car valeting and detailing service in Stockport, Manchester. Read our partner spotlight covering all their services.",
+    keywords: [
+      "SRV Detailing Stockport",
+      "mobile car valeting Manchester",
+      "car detailing Stockport",
+      "SRV Detailing review",
+      "mobile detailing Greater Manchester",
+      "paint correction Stockport",
+      "ceramic coating Manchester",
+    ],
+    relatedServiceSlugs: ["mobile-car-valeting", "car-detailing", "paint-correction", "exterior-protection"],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -25,6 +26,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: post.keywords.join(", "),
     alternates: { canonical: `${BUSINESS.url}/blog/${slug}` },
   };
+}
+
+function renderInline(text: string): React.ReactNode {
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const segments: React.ReactNode[] = [];
+  let cursor = 0;
+  let match: RegExpExecArray | null;
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > cursor) segments.push(text.slice(cursor, match.index));
+    const [full, label, href] = match;
+    const external = href.startsWith("http");
+    segments.push(
+      <a
+        key={match.index}
+        href={href}
+        className="text-amber-400 hover:text-amber-300 underline underline-offset-2 transition-colors"
+        {...(external ? { target: "_blank", rel: "noopener" } : {})}
+      >
+        {label}
+      </a>
+    );
+    cursor = match.index + full.length;
+  }
+  if (cursor < text.length) segments.push(text.slice(cursor));
+  return segments.length > 0 ? <>{segments}</> : <>{text}</>;
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -110,14 +136,14 @@ export default async function BlogPostPage({ params }: Props) {
                 return (
                   <ul key={i} className="list-disc list-inside space-y-1 mb-4 text-slate-400 text-sm">
                     {items.map((item, j) => (
-                      <li key={j}>{item.replace("- ", "")}</li>
+                      <li key={j}>{renderInline(item.replace("- ", ""))}</li>
                     ))}
                   </ul>
                 );
               }
               return (
                 <p key={i} className="text-slate-400 leading-relaxed mb-4 text-base">
-                  {block}
+                  {renderInline(block)}
                 </p>
               );
             })}
