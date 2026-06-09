@@ -296,11 +296,12 @@ export function articleSchema(post: {
   date: string;
   dateModified?: string;
   url: string;
-  author?: string;
+  keywords?: string[];
+  partnerEntity?: { name: string; url: string; address?: string };
 }) {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
@@ -308,6 +309,7 @@ export function articleSchema(post: {
     author: {
       "@type": "Organization",
       name: BUSINESS.name,
+      url: BUSINESS.url,
     },
     publisher: {
       "@type": "Organization",
@@ -318,6 +320,48 @@ export function articleSchema(post: {
       },
     },
     url: post.url,
-    mainEntityOfPage: post.url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": post.url },
+    locationCreated: {
+      "@type": "Place",
+      name: "Heaton Moor, Stockport",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Stockport",
+        postalCode: "SK4 2PY",
+        addressRegion: "Greater Manchester",
+        addressCountry: "GB",
+      },
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".speakable"],
+    },
   };
+  if (post.keywords?.length) {
+    schema.keywords = post.keywords.join(", ");
+  }
+  if (post.partnerEntity) {
+    schema.about = {
+      "@type": "LocalBusiness",
+      name: post.partnerEntity.name,
+      url: post.partnerEntity.url,
+      ...(post.partnerEntity.address ? {
+        address: { "@type": "PostalAddress", streetAddress: post.partnerEntity.address },
+      } : {}),
+    };
+    schema.mentions = [
+      {
+        "@type": "LocalBusiness",
+        name: post.partnerEntity.name,
+        url: post.partnerEntity.url,
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": `${BUSINESS.url}/#business`,
+        name: BUSINESS.name,
+        url: BUSINESS.url,
+      },
+    ];
+  }
+  return schema;
 }

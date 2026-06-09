@@ -10,6 +10,9 @@ export interface BlogPost {
   metaDescription: string;
   keywords: string[];
   relatedServiceSlugs: string[];
+  partnerName?: string;
+  partnerUrl?: string;
+  partnerAddress?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -352,6 +355,9 @@ For Dr. Autocare services, use our [quote form](/quote) or call us directly. For
       "ceramic coating Manchester",
     ],
     relatedServiceSlugs: ["mobile-car-valeting", "car-detailing", "paint-correction", "exterior-protection"],
+    partnerName: "SRV Detailing",
+    partnerUrl: "https://www.srvdetailing.co.uk/",
+    partnerAddress: "Stockport, Greater Manchester",
   },
   {
     slug: "warrington-car-detailing-ceramic-coating-partner",
@@ -482,6 +488,9 @@ Dr. Autocare cover Stockport, Heaton Moor, Manchester, and Greater Manchester as
       "ceramic coating North West",
     ],
     relatedServiceSlugs: ["exterior-protection", "paint-correction", "car-detailing", "mobile-car-valeting"],
+    partnerName: "Warrington Car Detailing",
+    partnerUrl: "https://warringtoncardetailing.co.uk",
+    partnerAddress: "Unit 1, Fairclough Mill, Warrington, WA5 1AH",
   },
 ];
 

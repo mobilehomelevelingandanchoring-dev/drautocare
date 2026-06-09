@@ -20,11 +20,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
+  const url = `${BUSINESS.url}/blog/${slug}`;
   return {
     title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords.join(", "),
-    alternates: { canonical: `${BUSINESS.url}/blog/${slug}` },
+    alternates: { canonical: url },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+    openGraph: {
+      title: post.metaTitle,
+      description: post.metaDescription,
+      url,
+      siteName: BUSINESS.name,
+      type: "article",
+      publishedTime: post.date,
+      authors: [BUSINESS.name],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metaTitle,
+      description: post.metaDescription,
+    },
   };
 }
 
@@ -63,6 +79,10 @@ export default async function BlogPostPage({ params }: Props) {
     excerpt: post.excerpt,
     date: post.date,
     url: `${BUSINESS.url}/blog/${post.slug}`,
+    keywords: post.keywords,
+    partnerEntity: post.partnerUrl
+      ? { name: post.partnerName!, url: post.partnerUrl, address: post.partnerAddress }
+      : undefined,
   });
   const breadcrumb = breadcrumbSchema([
     { name: "Home", url: BUSINESS.url },
@@ -101,7 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-5">{post.title}</h1>
-          <p className="text-lg text-slate-400 leading-relaxed">{post.excerpt}</p>
+          <p className="speakable text-lg text-slate-400 leading-relaxed">{post.excerpt}</p>
         </div>
       </section>
 

@@ -152,7 +152,7 @@ export default function Footer() {
         {/* Industry Partners */}
         <div className="mt-10 pt-8 border-t border-slate-800">
           <p className="text-xs text-slate-600 uppercase tracking-wider mb-3 font-semibold">Industry Partners</p>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             <span className="text-xs text-slate-500">
               <a
                 href="https://www.srvdetailing.co.uk/"
@@ -162,6 +162,28 @@ export default function Footer() {
                 SRV Detailing
               </a>
               {" "}— Mobile Car Valeting &amp; Detailing, Stockport &amp; Manchester
+              <Link
+                href="/blog/srv-detailing-stockport-mobile-car-valeting-partner"
+                className="ml-2 text-amber-500/60 hover:text-amber-400 transition-colors"
+              >
+                (Partner Blog)
+              </Link>
+            </span>
+            <span className="text-xs text-slate-500">
+              <a
+                href="https://warringtoncardetailing.co.uk"
+                title="Warrington Car Detailing — Ceramic Coating & Car Detailing Warrington WA5"
+                className="text-slate-400 hover:text-amber-400 transition-colors font-medium"
+              >
+                Warrington Car Detailing
+              </a>
+              {" "}— Ceramic Coating &amp; Car Detailing, Warrington WA5
+              <Link
+                href="/blog/warrington-car-detailing-ceramic-coating-partner"
+                className="ml-2 text-amber-500/60 hover:text-amber-400 transition-colors"
+              >
+                (Partner Blog)
+              </Link>
             </span>
           </div>
         </div>
